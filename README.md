@@ -14,5 +14,4 @@ Protip: You can place [BatchMover.cs](Assets/Scripts/Editor/BatchMover.cs) anywh
 - Translate in World or Local space
 - Rotate
 - Multiply or Set Scale
-- 
-Easy reversal of translation, rotation, or scale multiplication 
+- Easy reversal of translation, rotation, or scale multiplication 
