@@ -22,7 +22,7 @@ public class BatchMover : EditorWindow
 	{
 		minSize = new Vector2(226, 226);
 
-		bReverseTranslate = EditorGUILayout.Toggle(new GUIContent("Reverse Translate", "Causes the translation to happen in reverse. Basically a simple method to Undo."), bReverseTranslate);
+		bReverseTranslate = EditorGUILayout.Toggle(new GUIContent("Reverse Translate", "Causes the translation to happen in reverse.\nBasically a simple method to Undo."), bReverseTranslate);
 		translate = EditorGUILayout.Vector3Field("Translate Distance", translate);
 		EditorGUILayout.BeginHorizontal();
 		if (GUILayout.Button("World Translate"))
@@ -35,14 +35,14 @@ public class BatchMover : EditorWindow
 		}
 		EditorGUILayout.EndHorizontal();
 
-		bReverseRotate = EditorGUILayout.Toggle(new GUIContent("Reverse Rotation", "Causes the rotation to happen in reverse. Basically a simple method to Undo."), bReverseRotate);
+		bReverseRotate = EditorGUILayout.Toggle(new GUIContent("Reverse Rotation", "Causes the rotation to happen in reverse.\nBasically a simple method to Undo."), bReverseRotate);
 		rotate = EditorGUILayout.Vector3Field("Rotation Amount", rotate);
 		if (GUILayout.Button("Rotate"))
 		{
 			BatchRotate(bReverseRotate ? -rotate : rotate);
 		}
 
-		bReverseScale = EditorGUILayout.Toggle(new GUIContent("Reverse Scale Mutlipler", "Causes the scale multiplication to happen in reverse. Basically a simple method to Undo. Only works on Multiply."), bReverseScale);
+		bReverseScale = EditorGUILayout.Toggle(new GUIContent("Reverse Scale Mutlipler", "Causes the scale multiplication to happen in reverse.\nBasically a simple method to Undo. Only works on Multiply."), bReverseScale);
 		scale = EditorGUILayout.Vector3Field("Scale Multiplier", scale);
 		EditorGUILayout.BeginHorizontal();
 		if (GUILayout.Button("Multiply Scale"))
@@ -95,9 +95,12 @@ public class BatchMover : EditorWindow
 			}
 			else
 			{
-				Selection.transforms[i].localScale = new Vector3(	Selection.transforms[i].localScale.x * amount.x,
-																	Selection.transforms[i].localScale.y * amount.y,
-																	Selection.transforms[i].localScale.z * amount.z);
+				Selection.transforms[i].localScale = new Vector3
+				(
+					Selection.transforms[i].localScale.x * amount.x,
+					Selection.transforms[i].localScale.y * amount.y,
+					Selection.transforms[i].localScale.z * amount.z
+				);
 			}
 		}
 	}
