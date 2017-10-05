@@ -1,6 +1,8 @@
 # Unity-BatchMover
 A simple editor script to help with batch translation, rotation and scaling. 
 
+Verified working on Unity3D Version 2017.1.1
+
 ## Getting Started
 1. Copy contents of Assets folder to your project directory.
 2. Access through the Unity Menu by navigating to Window > Batch Mover.
